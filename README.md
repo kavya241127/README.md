@@ -83,11 +83,7 @@ visualize_data(df)
 
 # Example of handling web server logs (Apache/Nginx)
 def parse_web_server_log(entry):
-    pattern = r'(\d+\.\d+\.\d+\.\d+) - - 
-
-\[(.*?)\]
-
- "(.*?)" (\d+) (\d+)'
+    pattern = r'(\d+\.\d+\.\d+\.\d+) - - \[(.*?)\] "(.*?)" (\d+) (\d+)'
     match = re.match(pattern, entry)
     if match:
         return {
